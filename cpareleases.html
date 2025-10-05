@@ -39,35 +39,90 @@
         .version-item a:hover {
             text-decoration: underline;
         }
-        .footer-banner{
+        .header-banner{
+          background: linear-gradient(180deg, #e8ece9 0%, #f5f7f6 100%);
+          border-radius: 10px;
+          padding: 20px;
+          margin: 0 0 24px;
+          box-shadow: 0 2px 8px rgba(0,0,0,.06);
+        }
+        
+        .header-inner{
+          max-width: 1000px;          
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+        
+        .header-logo{
+          width: 160px;               
+          height: auto;
+          border-radius: 8px;
+          background: #fff;
+          box-shadow: 0 2px 6px rgba(0,0,0,.05);
+        }
+        
+        .header-text h1{
+          margin: 0 0 6px;
+          font-size: 24px;
+          color: #2e3a34;
+          line-height: 1.25;
+        }
+        
+        .header-text h2{
+          margin: 0;
+          font-size: 18px;
+          color: #3d4c44;
+          line-height: 1.4;
+          font-weight: 600;
+        }
+        
+        
+        @media (max-width: 640px){
+          .header-inner{ flex-direction: column; text-align: center; }
+          .header-logo{ width: 140px; }
+        }
+        .footer-banner {
           margin: 36px 0 20px;
-          background:#0b1220;
-          padding: 0 0 12px;
+          background: #4b5f52; /* เทาอมเขียว */
+          padding: 20px 0 12px;
+          border-radius: 8px;
         }
-        .footer-inner{
-          max-width:1200px;
-          margin:0 auto;
-          padding:0 16px;
+        .footer-inner {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 0 16px;
+          text-align: center;
+          color: #ecf2ed;
+          font-size: 14px;
+          line-height: 1.6;
         }
-        .footer-inner img{
-          display:block;
-          width:100%;
-          height:auto;
-          border-radius:12px;
-          box-shadow:0 8px 24px rgba(0,0,0,.08);
+        .footer-inner a {
+          color: #c8d5cc;
+          text-decoration: none;
         }
-        .footer-credit{
-          text-align:center;
-          color:#9aa3af;
-          font-size:12px;
-          margin-top:10px;
+        .footer-inner a:hover {
+          text-decoration: underline;
+        }
+        .footer-credit {
+          color: #d9e0da;
+          font-size: 12px;
+          margin-top: 10px;
         }
     </style>
 </head>
 <body>
+    <header class="header-banner">
+      <div class="header-inner">
+        <img src="src/img/Witch_HighRes.jpg" alt="Witch Hanger Logo" class="header-logo">
+        <div class="header-text">
+          <h1>Carpenter & Paterson (Asia) Ltd</h1>
+          <h2>Witch Hanger 5 (CPA Catalog) <br/>Application Download Links</h2>
+        </div>
+      </div>
+    </header>
     <div class="container">
-        <h1>Carpenter & Paterson (Asia) Ltd</h1>
-        <h1>Witch Hanger 5 (CPA Catalog) <br/>Application Download Links</h1>
         <ul class="version-list">
             <li class="version-item">
                 <span>Version 1.2.61.0 (with AVEVA E3D support) - Released: 1 Oct 2025</span>
@@ -96,16 +151,24 @@
         </ul>
     </div>
     <footer class="footer-banner">
-    <div class="footer-inner">
-      <!-- เปลี่ยนพาธรูปตามที่คุณอัปโหลดไว้ใน repo -->
-      <a href="https://www.cpa-pipesupports.com" target="_blank" rel="noopener">
-        <img src="assets/cpa-banner.png" alt="Carpenter &amp; Paterson (Asia) Ltd – Pipe Supports Solutions Worldwide">
-      </a>
-      <div class="footer-credit">© Carpenter &amp; Paterson (Asia) Ltd</div>
-    </div>
-  </footer>
+        <div class="footer-inner">
+          <div>
+            <strong>Carpenter & Paterson (Asia) Ltd</strong><br>
+            Bangkok Free Trade Zone<br>
+            88/91 Moo 15, Tambol Bangsaothong,<br>
+            Amphoe Bangsaothong, Province Samuthprakarn 10570<br>
+            Thailand<br><br>
+            📧 <a href="mailto:info@cp-ltd.co.th">info@cp-ltd.co.th</a><br>
+            ☎️ +66 (0) 21-825-204-5
+          </div>
+          <div class="footer-credit">
+            © Carpenter &amp; Paterson (Asia) Ltd
+          </div>
+        </div>
+    </footer>
 </body>
 </html>
+
 
 
 
