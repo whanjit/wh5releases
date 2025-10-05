@@ -41,26 +41,30 @@
         }
         .footer-banner {
           margin: 36px 0 20px;
-          background: #4b5f52;
-          padding: 0 0 12px;
+          background: #4b5f52; /* เทาอมเขียว */
+          padding: 20px 0 12px;
+          border-radius: 8px;
+        }
+        .footer-inner {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 0 16px;
+          text-align: center;
+          color: #ecf2ed;
+          font-size: 14px;
+          line-height: 1.6;
+        }
+        .footer-inner a {
+          color: #c8d5cc;
+          text-decoration: none;
+        }
+        .footer-inner a:hover {
+          text-decoration: underline;
         }
         .footer-credit {
-          text-align: center;
           color: #d9e0da;
           font-size: 12px;
           margin-top: 10px;
-        }
-        .footer-inner{
-          max-width:1200px;
-          margin:0 auto;
-          padding:0 16px;
-        }
-        .footer-inner img{
-          display:block;
-          width:100%;
-          height:auto;
-          border-radius:12px;
-          box-shadow:0 8px 24px rgba(1,1,1,.08);
         }
     </style>
 </head>
@@ -78,10 +82,18 @@
     </div>
     <footer class="footer-banner">
     <div class="footer-inner">
-      <!-- เปลี่ยนพาธรูปตามที่คุณอัปโหลดไว้ใน repo -->
-      <a href="https://www.cpa-pipesupports.com" target="_blank" rel="noopener">
-        <div class="footer-credit">© Carpenter &amp; Paterson (Asia) Ltd</div>
-      </a>
+      <div>
+        <strong>Carpenter & Paterson (Asia) Ltd</strong><br>
+        Bangkok Free Trade Zone<br>
+        88/91 Moo 15, Tambol Bangsaothong,<br>
+        Amphoe Bangsaothong, Province Samuthprakarn 10570<br>
+        Thailand<br><br>
+        📧 <a href="mailto:info@cp-ltd.co.th">info@cp-ltd.co.th</a><br>
+        ☎️ +66 (0) 21-825-204-5
+      </div>
+      <div class="footer-credit">
+        © Carpenter &amp; Paterson (Asia) Ltd
+      </div>
     </div>
   </footer>
 </body>
