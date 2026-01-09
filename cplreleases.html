@@ -1,176 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Witch Hanger 5 (CPL Catalog) Application Download Links</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            color: #333;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .version-list {
-            list-style: none;
-            padding: 0;
-        }
-        .version-item {
-            background: #fff;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .version-item a {
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
-        }
-        .version-item a:hover {
-            text-decoration: underline;
-        }
-        .header-banner{
-          background: linear-gradient(180deg, #e8ece9 0%, #f5f7f6 100%);
-          border-radius: 10px;
-          padding: 20px;
-          margin: 0 0 24px;
-          box-shadow: 0 2px 8px rgba(0,0,0,.06);
-        }
-        
-        .header-inner{
-          max-width: 1000px;          
-          margin: 0 auto;
-          display: flex;
-          align-items: center;
-          gap: 20px;
-        }
-        
-        .header-logo{
-          width: 160px;               
-          height: auto;
-          border-radius: 8px;
-          background: #fff;
-          box-shadow: 0 2px 6px rgba(0,0,0,.05);
-        }
-        
-        .header-text h1{
-          margin: 0 0 6px;
-          font-size: 24px;
-          color: #2e3a34;
-          line-height: 1.25;
-        }
-        
-        .header-text h2{
-          margin: 0;
-          font-size: 18px;
-          color: #3d4c44;
-          line-height: 1.4;
-          font-weight: 600;
-        }
-        
-        
-        @media (max-width: 640px){
-          .header-inner{ flex-direction: column; text-align: center; }
-          .header-logo{ width: 140px; }
-        }
-        .footer-banner {
-          margin: 36px 0 20px;
-          background: #4b5f52; /* เทาอมเขียว */
-          padding: 20px 0 12px;
-          border-radius: 8px;
-        }
-        .footer-inner {
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 0 16px;
-          text-align: center;
-          color: #ecf2ed;
-          font-size: 14px;
-          line-height: 1.6;
-        }
-        .footer-inner a {
-          color: #c8d5cc;
-          text-decoration: none;
-        }
-        .footer-inner a:hover {
-          text-decoration: underline;
-        }
-        .footer-credit {
-          color: #d9e0da;
-          font-size: 12px;
-          margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Witch Hanger 5 (CPA Catalog) Application Download Links</title>
+
+  <style>
+    :root{
+      --bg: #f5f6f7;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --brand: #0b6b3a;
+      --link: #0b63ff;
+      --border: rgba(15, 23, 42, .10);
+      --shadow: 0 8px 20px rgba(0,0,0,.06);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    .page{
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header-banner{
+      background: linear-gradient(180deg, #e8ece9 0%, #f5f7f6 100%);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 18px;
+      border: 1px solid var(--border);
+    }
+
+    .header-inner{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-logo{
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 6px;
+      flex: 0 0 auto;
+    }
+
+    .header-text h1{
+      margin: 0 0 6px;
+      font-size: 22px;
+      color: #20312a;
+      line-height: 1.2;
+    }
+    .header-text h2{
+      margin: 0;
+      font-size: 16px;
+      color: #33453c;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .header-text .sub{
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 640px){
+      .header-inner{ flex-direction: column; text-align: center; }
+      .header-logo{ width: 110px; height: 110px; }
+    }
+
+    /* Versions */
+    .list-title{
+      margin: 14px 0 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .version-list{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .version-card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 14px 14px 12px;
+    }
+
+    .version-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .version-meta{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .ver{
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .date{
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid rgba(11,107,58,.20);
+      background: rgba(11,107,58,.08);
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    .actions{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(11,99,255,.20);
+      background: rgba(11,99,255,.08);
+      color: var(--link);
+      transition: transform .05s ease, background .15s ease;
+      white-space: nowrap;
+    }
+    .btn:hover{
+      background: rgba(11,99,255,.12);
+    }
+    .btn:active{
+      transform: translateY(1px);
+    }
+
+    /* Release notes (collapsible) */
+    details.notes{
+      margin-top: 10px;
+      border-top: 1px dashed var(--border);
+      padding-top: 10px;
+    }
+
+    details.notes > summary{
+      cursor: pointer;
+      list-style: none;
+      font-weight: 700;
+      color: #334155;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    details.notes > summary::-webkit-details-marker{ display: none; }
+
+    .notes-hint{
+      color: var(--muted);
+      font-weight: 400;
+      font-size: 12px;
+      margin-left: 6px;
+    }
+
+    .notes-list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: #374151;
+    }
+    .notes-list li{
+      margin: 6px 0;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    .footer-banner{
+      margin: 26px 0 14px;
+      background: #4b5f52;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .footer-inner{
+      padding: 18px 16px;
+      text-align: center;
+      color: #ecf2ed;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .footer-inner a{
+      color: #cfe0d5;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .footer-inner a:hover{ text-decoration: underline; }
+    .footer-credit{
+      margin-top: 10px;
+      font-size: 12px;
+      color: #d9e0da;
+      opacity: .95;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="page">
+
     <header class="header-banner">
       <div class="header-inner">
-        <img src="src/img/Witch_HighRes.jpg" alt="Witch Hanger Logo" class="header-logo">
+        <img src="src/img/Witch_HighRes.jpg" alt="Carpenter & Paterson Ltd logo" class="header-logo" />
         <div class="header-text">
-          <h1>Carpenter & Paterson (UK) Ltd</h1>
-          <h2>Witch Hanger 5 (CPL Catalog) <br/>Application Download Links</h2>
+          <h1>Carpenter &amp; Paterson (UK) Ltd</h1>
+          <h2>Witch Hanger 5 (CPL Catalog)<br />Application Download Links</h2>
+          <div class="sub">Download the latest installer, or pick a previous build if required.</div>
         </div>
       </div>
     </header>
-    <div class="container">
-        <ul class="version-list">
-            <li class="version-item">
-                <span>Version 1.2.78.0 - Released: 07 Jan 2026</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQArmBUTUx0mSYGP1nztpV88ASUK5ozJ_jbt24Ctjh3ljjU?e=mNLaNN&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.77.0 - Released: 24 Dec 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBgD9P0bbGCQKAKRyMk6e5nAe2dltd67CsdpSkDO1YTNpw?e=068BNx&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.47 - Released: 12 Jun 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EYnNhVouXcVMnvMOHlY_uQMByQ3DcNJUlkc6rPqBp-pYlg?e=k7gF0g&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.18 - Released: 17 February 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EfBxG_9fo5xFpewRBHMhzT4B5GPKm7IZ03LRSHdcpKOfLA?e=sxBD0c&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.13 - Released: 6 February 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/ESyiGkTP5rJOl1RLyiDG8NsBq32evYvEc_oMD9m_UWNBEA?e=TcNRmP&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.12 - Released: 4 February 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/Eb2i1969DTpMusvY7XSJtd8BuwBEUZ8TXg_Y1Zkbv-zxZQ?e=a31dnh&download=1" target="_blank">Download</a>
-            </li>
-        </ul>
-    </div>
+
+    <div class="list-title">Available versions</div>
+
+    <ul class="version-list">
+
+      <!-- Latest -->
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="badge">Latest</span>
+            <span class="ver">Version 1.2.79.0</span>
+            <span class="date">Released: 09 Jan 2026</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBmux1CzI6lQ6-LTD5C7hc1AXflVuU4yaP0e1-OEqIkk6s?e=DbsXwW&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+
+        <details class="notes" open>
+          <summary>
+            Release notes
+            <span class="notes-hint">(short)</span>
+          </summary>
+          <ul class="notes-list">
+            <li><strong>Fix:</strong> Corrected the download link (URI) for update files</li>
+            <li><strong>Added:</strong> Short release notes in update popup</li>
+          </ul>
+        </details>
+      </li>
+
+      <!-- Others -->
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.78.0</span>
+            <span class="date">Released: 07 Jan 2026</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQArmBUTUx0mSYGP1nztpV88ASUK5ozJ_jbt24Ctjh3ljjU?e=mNLaNN&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.77.0</span>
+            <span class="date">Released: 24 Dec 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBgD9P0bbGCQKAKRyMk6e5nAe2dltd67CsdpSkDO1YTNpw?e=068BNx&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.47.0</span>
+            <span class="date">Released: 12 Jun 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EYnNhVouXcVMnvMOHlY_uQMByQ3DcNJUlkc6rPqBp-pYlg?e=k7gF0g&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
     <footer class="footer-banner">
-        <div class="footer-inner">
-          <div>
-            <strong>Carpenter & Paterson Ltd Head Office (Welshpool)</strong><br>
-            Crown Works<br>
+      <div class="footer-inner">
+        <div>
+          <strong>Carpenter & Paterson Ltd Head Office (Welshpool)</strong><br />
+          Crown Works<br>
             Welshpool<br>
             Powys<br>
             SY21 7BE<br>
             UK<br><br>
             ☎️ +44 (0)1938 552061<br><br>
             For further details or information please click <a href="https://www.cp-ltd.co.uk/contact-form" target="_blank">here</a> to fill out our contact form.
-          </div>
-          <div class="footer-credit">
-            © Carpenter &amp; Paterson Ltd Head Office (Welshpool)
-          </div>
         </div>
+        <div class="footer-credit">© Carpenter &amp; Paterson Ltd Head Office (Welshpool)</div>
+      </div>
     </footer>
+
+  </div>
 </body>
 </html>
-
-
-
-
-
