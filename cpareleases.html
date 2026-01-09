@@ -1,247 +1,508 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Witch Hanger 5 (CPA Catalog) Application Download Links</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            color: #333;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .version-list {
-            list-style: none;
-            padding: 0;
-        }
-        .version-item {
-            background: #fff;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .version-item a {
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
-        }
-        .version-item a:hover {
-            text-decoration: underline;
-        }
-        .header-banner{
-          background: linear-gradient(180deg, #e8ece9 0%, #f5f7f6 100%);
-          border-radius: 10px;
-          padding: 20px;
-          margin: 0 0 24px;
-          box-shadow: 0 2px 8px rgba(0,0,0,.06);
-        }
-        
-        .header-inner{
-          max-width: 1000px;          
-          margin: 0 auto;
-          display: flex;
-          align-items: center;
-          gap: 20px;
-        }
-        
-        .header-logo{
-          width: 160px;               
-          height: auto;
-          border-radius: 8px;
-          background: #fff;
-          box-shadow: 0 2px 6px rgba(0,0,0,.05);
-        }
-        
-        .header-text h1{
-          margin: 0 0 6px;
-          font-size: 24px;
-          color: #2e3a34;
-          line-height: 1.25;
-        }
-        
-        .header-text h2{
-          margin: 0;
-          font-size: 18px;
-          color: #3d4c44;
-          line-height: 1.4;
-          font-weight: 600;
-        }
-        
-        
-        @media (max-width: 640px){
-          .header-inner{ flex-direction: column; text-align: center; }
-          .header-logo{ width: 140px; }
-        }
-        .footer-banner {
-          margin: 36px 0 20px;
-          background: #4b5f52; /* เทาอมเขียว */
-          padding: 20px 0 12px;
-          border-radius: 8px;
-        }
-        .footer-inner {
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 0 16px;
-          text-align: center;
-          color: #ecf2ed;
-          font-size: 14px;
-          line-height: 1.6;
-        }
-        .footer-inner a {
-          color: #c8d5cc;
-          text-decoration: none;
-        }
-        .footer-inner a:hover {
-          text-decoration: underline;
-        }
-        .footer-credit {
-          color: #d9e0da;
-          font-size: 12px;
-          margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Witch Hanger 5 (CPA Catalog) Application Download Links</title>
+
+  <style>
+    :root{
+      --bg: #f5f6f7;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --brand: #0b6b3a;
+      --link: #0b63ff;
+      --border: rgba(15, 23, 42, .10);
+      --shadow: 0 8px 20px rgba(0,0,0,.06);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    .page{
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header-banner{
+      background: linear-gradient(180deg, #e8ece9 0%, #f5f7f6 100%);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 18px;
+      border: 1px solid var(--border);
+    }
+
+    .header-inner{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-logo{
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 6px;
+      flex: 0 0 auto;
+    }
+
+    .header-text h1{
+      margin: 0 0 6px;
+      font-size: 22px;
+      color: #20312a;
+      line-height: 1.2;
+    }
+    .header-text h2{
+      margin: 0;
+      font-size: 16px;
+      color: #33453c;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .header-text .sub{
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 640px){
+      .header-inner{ flex-direction: column; text-align: center; }
+      .header-logo{ width: 110px; height: 110px; }
+    }
+
+    /* Versions */
+    .list-title{
+      margin: 14px 0 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .version-list{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .version-card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 14px 14px 12px;
+    }
+
+    .version-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .version-meta{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .ver{
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .date{
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid rgba(11,107,58,.20);
+      background: rgba(11,107,58,.08);
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    .actions{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(11,99,255,.20);
+      background: rgba(11,99,255,.08);
+      color: var(--link);
+      transition: transform .05s ease, background .15s ease;
+      white-space: nowrap;
+    }
+    .btn:hover{
+      background: rgba(11,99,255,.12);
+    }
+    .btn:active{
+      transform: translateY(1px);
+    }
+
+    /* Release notes (collapsible) */
+    details.notes{
+      margin-top: 10px;
+      border-top: 1px dashed var(--border);
+      padding-top: 10px;
+    }
+
+    details.notes > summary{
+      cursor: pointer;
+      list-style: none;
+      font-weight: 700;
+      color: #334155;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    details.notes > summary::-webkit-details-marker{ display: none; }
+
+    .notes-hint{
+      color: var(--muted);
+      font-weight: 400;
+      font-size: 12px;
+      margin-left: 6px;
+    }
+
+    .notes-list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: #374151;
+    }
+    .notes-list li{
+      margin: 6px 0;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    .footer-banner{
+      margin: 26px 0 14px;
+      background: #4b5f52;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .footer-inner{
+      padding: 18px 16px;
+      text-align: center;
+      color: #ecf2ed;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .footer-inner a{
+      color: #cfe0d5;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .footer-inner a:hover{ text-decoration: underline; }
+    .footer-credit{
+      margin-top: 10px;
+      font-size: 12px;
+      color: #d9e0da;
+      opacity: .95;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="page">
+
     <header class="header-banner">
       <div class="header-inner">
-        <img src="src/img/cpalogo.png" alt="Witch Hanger Logo" class="header-logo">
+        <img src="src/img/cpalogo.png" alt="Carpenter & Paterson (Asia) Ltd logo" class="header-logo" />
         <div class="header-text">
-          <h1>Carpenter & Paterson (Asia) Ltd</h1>
-          <h2>Witch Hanger 5 (CPA Catalog) <br/>Application Download Links</h2>
+          <h1>Carpenter &amp; Paterson (Asia) Ltd</h1>
+          <h2>Witch Hanger 5 (CPA Catalog)<br />Application Download Links</h2>
+          <div class="sub">Download the latest installer, or pick a previous build if required.</div>
         </div>
       </div>
     </header>
-    <div class="container">
-        <ul class="version-list">
-            <li class="version-item">
-                <span>Version 1.2.78.0 - Released: 09 Jan 2026</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBmux1CzI6lQ6-LTD5C7hc1AXflVuU4yaP0e1-OEqIkk6s?e=DbsXwW&download=1" target="_blank">Download</a>
-                <span>
-                    <li>• Fix: FIG102 ↔ FIG384A/B/C/D compatibility</li>
-                    <li>• Change: Rod RTO calculation for FIG400 + FIG102 + FIG384A/B/C/D connection set</li>
-                    <li>• Added: Short release notes in update popup</li>
-                </span>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.76.0 - Released: 12 Dec 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQCYiCpvMBpIRI4SE2wzM9HjARWI7ONWdiqn-JN57fKHUxw?e=kOs6ME&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.75.0 - Released: 10 Dec 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQDcxtwJ98HNTIU885cSXYzkAUKxfJQTn_-i3HAtw_g1Glk?e=YY7TGK&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.74.0 - Released: 04 Dec 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQD_w1Qb-lLGQLK9rboeKX8EAWJ98OCnwFB7Lpwzl7W-tyo?e=HBIF3t&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.73.0 - Released: 03 Dec 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQCcHTo39CzDQaDhNzdXZBVMAW26O9jkVlVjXE_dDRhSDF0?e=O3FOXx&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.72.0 - Released: 01 Dec 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQAfik0tVbwWRIQPy69Ix9WqAWJHix-3h51FAtePNQkAolg?e=L9sDIe&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.70.0 - Released: 18 Nov 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/Eac7gixdEppLk5aUYKf6RuwBUH4Z5OHBWM5iQsw3v1xXLA?e=iVSpri&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.68.0 - Released: 12 Nov 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EcWt0qRShpBGh8EGBFiBHrQBgalX3o1nn9SNSDTWRuB2xA?e=UwsI2J&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.67.0 - Released: 31 Oct 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EZzsmdT-tUVAjXNJrWp2xO4BuiDdSJ_f0jDZWiI2dJeeoA?e=a1l27q&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.66.0 - Released: 31 Oct 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EYZAOQbCWQ1GrkxOeEI5PHUBgqNzbpLoZCResv9_GDVBNw?e=LpnCJd&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.63.0 - Released: 17 Oct 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EZkFQl286whNjVZZnxfcAt0B3R8b7CtvF4VCLi9kXuAQ1w?e=YbjBiY&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.62.0 - Released: 16 Oct 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/ETlQ5bdHAOhIjW9UxBmsY_cBySJ0h-pn_jLbeYugMEAK_A?e=6fWlVh&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.61.0 - Released: 1 Oct 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EQ1h582C4lhGopRZVtAX1PoBQPBYSMeQbgM0MJfsmSjU4Q?e=8Bjs1D&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.60.0 - Released: 24 Sep 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EQnZSSoSvr1PtVjYUW8rZtwBmHuU5Jk00QyNbnxIEcwKgw?e=kirI74&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.59.0 - Released: 4 Sep 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/Ed3lMUvEuBhFglqZhC66i2IBzyZbmhRGJaJa2jnBdaI6Pg?e=Bb0VRV&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.58.0 - Released: 1 Sep 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/ESMlMWyApyJMjuAvMLwWpT0BxCVR1RvXFI3wmVUg17HCmw?e=mwevws&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.57.0 - Released: 27 Aug 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EddafSPvZdVKqbDqNuK2wjgBgUhB5zOsLx1zdgknaEUNSA?e=W0PaTx&download=1" target="_blank">Download</a>
-            </li>
-            <li class="version-item">
-                <span>Version 1.2.56.0 - Released: 30 Jul 2025</span>
-                <a href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EdR229ggAhhHkcomJ1Q1tKQB-sf1g73YmgTYlsn2HMqHMQ?e=oktWAU&download=1" target="_blank">Download</a>
-            </li>
-        </ul>
-    </div>
-    <footer class="footer-banner">
-        <div class="footer-inner">
-          <div>
-            <strong>Carpenter & Paterson (Asia) Ltd</strong><br>
-            Bangkok Free Trade Zone<br>
-            88/91 Moo 15, Tambol Bangsaothong,<br>
-            Amphoe Bangsaothong, Province Samuthprakarn 10570<br>
-            Thailand<br><br>
-            📧 <a href="mailto:info@cp-ltd.co.th">info@cp-ltd.co.th</a><br>
-            ☎️ +66 (0) 21-825-204-5
+
+    <div class="list-title">Available versions</div>
+
+    <ul class="version-list">
+
+      <!-- Latest -->
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="badge">Latest</span>
+            <span class="ver">Version 1.2.78.0</span>
+            <span class="date">Released: 09 Jan 2026</span>
           </div>
-          <div class="footer-credit">
-            © Carpenter &amp; Paterson (Asia) Ltd
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBmux1CzI6lQ6-LTD5C7hc1AXflVuU4yaP0e1-OEqIkk6s?e=DbsXwW&download=1" target="_blank" rel="noopener">Download</a>
           </div>
         </div>
+
+        <details class="notes" open>
+          <summary>
+            Release notes
+            <span class="notes-hint">(short)</span>
+          </summary>
+          <ul class="notes-list">
+            <li><strong>Fix:</strong> FIG102 ↔ FIG384A/B/C/D compatibility</li>
+            <li><strong>Change:</strong> Rod RTO calculation for FIG400 + FIG102 + FIG384A/B/C/D connection set</li>
+            <li><strong>Added:</strong> Short release notes in update popup</li>
+          </ul>
+        </details>
+      </li>
+
+      <!-- Others -->
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.76.0</span>
+            <span class="date">Released: 12 Dec 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQCYiCpvMBpIRI4SE2wzM9HjARWI7ONWdiqn-JN57fKHUxw?e=kOs6ME&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.75.0</span>
+            <span class="date">Released: 10 Dec 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQDcxtwJ98HNTIU885cSXYzkAUKxfJQTn_-i3HAtw_g1Glk?e=YY7TGK&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.74.0</span>
+            <span class="date">Released: 04 Dec 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQD_w1Qb-lLGQLK9rboeKX8EAWJ98OCnwFB7Lpwzl7W-tyo?e=HBIF3t&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.73.0</span>
+            <span class="date">Released: 03 Dec 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQCcHTo39CzDQaDhNzdXZBVMAW26O9jkVlVjXE_dDRhSDF0?e=O3FOXx&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.72.0</span>
+            <span class="date">Released: 01 Dec 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQAfik0tVbwWRIQPy69Ix9WqAWJHix-3h51FAtePNQkAolg?e=L9sDIe&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.70.0</span>
+            <span class="date">Released: 18 Nov 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/Eac7gixdEppLk5aUYKf6RuwBUH4Z5OHBWM5iQsw3v1xXLA?e=iVSpri&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.68.0</span>
+            <span class="date">Released: 12 Nov 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EcWt0qRShpBGh8EGBFiBHrQBgalX3o1nn9SNSDTWRuB2xA?e=UwsI2J&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.67.0</span>
+            <span class="date">Released: 31 Oct 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EZzsmdT-tUVAjXNJrWp2xO4BuiDdSJ_f0jDZWiI2dJeeoA?e=a1l27q&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.66.0</span>
+            <span class="date">Released: 31 Oct 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EYZAOQbCWQ1GrkxOeEI5PHUBgqNzbpLoZCResv9_GDVBNw?e=LpnCJd&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.63.0</span>
+            <span class="date">Released: 17 Oct 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EZkFQl286whNjVZZnxfcAt0B3R8b7CtvF4VCLi9kXuAQ1w?e=YbjBiY&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.62.0</span>
+            <span class="date">Released: 16 Oct 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/ETlQ5bdHAOhIjW9UxBmsY_cBySJ0h-pn_jLbeYugMEAK_A?e=6fWlVh&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.61.0</span>
+            <span class="date">Released: 01 Oct 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EQ1h582C4lhGopRZVtAX1PoBQPBYSMeQbgM0MJfsmSjU4Q?e=8Bjs1D&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.60.0</span>
+            <span class="date">Released: 24 Sep 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EQnZSSoSvr1PtVjYUW8rZtwBmHuU5Jk00QyNbnxIEcwKgw?e=kirI74&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.59.0</span>
+            <span class="date">Released: 04 Sep 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/Ed3lMUvEuBhFglqZhC66i2IBzyZbmhRGJaJa2jnBdaI6Pg?e=Bb0VRV&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.58.0</span>
+            <span class="date">Released: 01 Sep 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/ESMlMWyApyJMjuAvMLwWpT0BxCVR1RvXFI3wmVUg17HCmw?e=mwevws&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.57.0</span>
+            <span class="date">Released: 27 Aug 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EddafSPvZdVKqbDqNuK2wjgBgUhB5zOsLx1zdgknaEUNSA?e=W0PaTx&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="version-card">
+        <div class="version-top">
+          <div class="version-meta">
+            <span class="ver">Version 1.2.56.0</span>
+            <span class="date">Released: 30 Jul 2025</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/EdR229ggAhhHkcomJ1Q1tKQB-sf1g73YmgTYlsn2HMqHMQ?e=oktWAU&download=1" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <footer class="footer-banner">
+      <div class="footer-inner">
+        <div>
+          <strong>Carpenter &amp; Paterson (Asia) Ltd</strong><br />
+          Bangkok Free Trade Zone<br />
+          88/91 Moo 15, Tambol Bangsaothong,<br />
+          Amphoe Bangsaothong, Province Samuthprakarn 10570<br />
+          Thailand<br /><br />
+          📧 <a href="mailto:info@cp-ltd.co.th">info@cp-ltd.co.th</a><br />
+          ☎️ +66 (0) 21-825-204-5
+        </div>
+        <div class="footer-credit">© Carpenter &amp; Paterson (Asia) Ltd</div>
+      </div>
     </footer>
+
+  </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
