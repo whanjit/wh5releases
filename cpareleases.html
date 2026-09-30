@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Witch Hanger 5 (CPA Catalog) Application Download Links</title>
 
+  <!-- Markdown renderer + sanitizer for GitHub release notes -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+
   <style>
     :root{
       --bg: #f5f6f7;
@@ -28,10 +32,7 @@
       padding: 20px;
     }
 
-    .page{
-      max-width: 900px;
-      margin: 0 auto;
-    }
+    .page{ max-width: 900px; margin: 0 auto; }
 
     /* Header */
     .header-banner{
@@ -42,63 +43,26 @@
       margin-bottom: 18px;
       border: 1px solid var(--border);
     }
-
-    .header-inner{
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
+    .header-inner{ display: flex; align-items: center; gap: 16px; }
     .header-logo{
-      width: 120px;
-      height: 120px;
-      object-fit: contain;
-      border-radius: 12px;
-      background: #fff;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-      padding: 6px;
-      flex: 0 0 auto;
+      width: 120px; height: 120px; object-fit: contain;
+      border-radius: 12px; background: #fff;
+      border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+      padding: 6px; flex: 0 0 auto;
     }
-
-    .header-text h1{
-      margin: 0 0 6px;
-      font-size: 22px;
-      color: #20312a;
-      line-height: 1.2;
-    }
-    .header-text h2{
-      margin: 0;
-      font-size: 16px;
-      color: #33453c;
-      font-weight: 600;
-      line-height: 1.3;
-    }
-    .header-text .sub{
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
+    .header-text h1{ margin: 0 0 6px; font-size: 22px; color: #20312a; line-height: 1.2; }
+    .header-text h2{ margin: 0; font-size: 16px; color: #33453c; font-weight: 600; line-height: 1.3; }
+    .header-text .sub{ margin-top: 8px; color: var(--muted); font-size: 13px; }
     @media (max-width: 640px){
       .header-inner{ flex-direction: column; text-align: center; }
       .header-logo{ width: 110px; height: 110px; }
     }
 
     /* Versions */
-    .list-title{
-      margin: 14px 0 10px;
-      font-size: 14px;
-      color: var(--muted);
-    }
+    .list-title{ margin: 14px 0 10px; font-size: 14px; color: var(--muted); }
+    .list-title.legacy{ margin-top: 28px; }
 
-    .version-list{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 12px;
-    }
+    .version-list{ list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
 
     .version-card{
       background: var(--card);
@@ -107,133 +71,68 @@
       box-shadow: var(--shadow-sm);
       padding: 14px 14px 12px;
     }
-
-    .version-top{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .version-meta{
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .ver{
-      font-weight: 700;
-      font-size: 15px;
-    }
-    .date{
-      color: var(--muted);
-      font-size: 13px;
-    }
+    .version-top{ display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .version-meta{ display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .ver{ font-weight: 700; font-size: 15px; }
+    .date{ color: var(--muted); font-size: 13px; }
 
     .badge{
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 12px;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 10px; border-radius: 999px; font-size: 12px;
       border: 1px solid rgba(11,107,58,.20);
       background: rgba(11,107,58,.08);
-      color: var(--brand);
-      font-weight: 700;
+      color: var(--brand); font-weight: 700;
     }
+    .badge.pre{ border-color: rgba(180,83,9,.25); background: rgba(180,83,9,.08); color: #b45309; }
 
-    .actions{
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
+    .actions{ display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .btn{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-weight: 700;
-      padding: 10px 14px;
-      border-radius: 10px;
+      display: inline-flex; align-items: center; justify-content: center;
+      text-decoration: none; font-weight: 700;
+      padding: 10px 14px; border-radius: 10px;
       border: 1px solid rgba(11,99,255,.20);
       background: rgba(11,99,255,.08);
       color: var(--link);
       transition: transform .05s ease, background .15s ease;
       white-space: nowrap;
     }
-    .btn:hover{
-      background: rgba(11,99,255,.12);
-    }
-    .btn:active{
-      transform: translateY(1px);
-    }
+    .btn:hover{ background: rgba(11,99,255,.12); }
+    .btn:active{ transform: translateY(1px); }
+    .btn.ghost{ background: transparent; border-color: var(--border); color: #334155; font-weight: 600; }
 
     /* Release notes (collapsible) */
-    details.notes{
-      margin-top: 10px;
-      border-top: 1px dashed var(--border);
-      padding-top: 10px;
-    }
-
+    details.notes{ margin-top: 10px; border-top: 1px dashed var(--border); padding-top: 10px; }
     details.notes > summary{
-      cursor: pointer;
-      list-style: none;
-      font-weight: 700;
-      color: #334155;
-      user-select: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      cursor: pointer; list-style: none; font-weight: 700; color: #334155;
+      user-select: none; display: flex; align-items: center; gap: 8px;
     }
     details.notes > summary::-webkit-details-marker{ display: none; }
+    .notes-hint{ color: var(--muted); font-weight: 400; font-size: 12px; margin-left: 6px; }
+    .notes-list{ margin: 10px 0 0; padding-left: 18px; color: #374151; }
+    .notes-list li{ margin: 6px 0; line-height: 1.4; }
 
-    .notes-hint{
-      color: var(--muted);
-      font-weight: 400;
-      font-size: 12px;
-      margin-left: 6px;
-    }
+    /* Markdown body from GitHub */
+    .md{ margin-top: 10px; color: #374151; line-height: 1.5; font-size: 14px; overflow-wrap: anywhere; }
+    .md img{ max-width: 100%; height: auto; border-radius: 6px; }
+    .md h1,.md h2,.md h3,.md h4{ font-size: 15px; margin: 14px 0 6px; color: #1f2937; }
+    .md p{ margin: 8px 0; }
+    .md ul,.md ol{ padding-left: 20px; margin: 6px 0; }
+    .md li{ margin: 5px 0; }
+    .md a{ color: var(--link); }
+    .md code{ background: #f1f5f9; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
 
-    .notes-list{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: #374151;
+    .status{
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 16px; color: var(--muted); font-size: 14px; text-align: center;
     }
-    .notes-list li{
-      margin: 6px 0;
-      line-height: 1.4;
-    }
+    .status a{ color: var(--link); font-weight: 700; }
 
     /* Footer */
-    .footer-banner{
-      margin: 26px 0 14px;
-      background: #4b5f52;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,.10);
-    }
-    .footer-inner{
-      padding: 18px 16px;
-      text-align: center;
-      color: #ecf2ed;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    .footer-inner a{
-      color: #cfe0d5;
-      text-decoration: none;
-      font-weight: 700;
-    }
+    .footer-banner{ margin: 26px 0 14px; background: #4b5f52; border-radius: 10px; border: 1px solid rgba(255,255,255,.10); }
+    .footer-inner{ padding: 18px 16px; text-align: center; color: #ecf2ed; font-size: 14px; line-height: 1.6; }
+    .footer-inner a{ color: #cfe0d5; text-decoration: none; font-weight: 700; }
     .footer-inner a:hover{ text-decoration: underline; }
-    .footer-credit{
-      margin-top: 10px;
-      font-size: 12px;
-      color: #d9e0da;
-      opacity: .95;
-    }
+    .footer-credit{ margin-top: 10px; font-size: 12px; color: #d9e0da; opacity: .95; }
   </style>
 </head>
 
@@ -253,499 +152,144 @@
 
     <div class="list-title">Available versions</div>
 
-    <ul class="version-list">
+    <!-- Filled automatically from GitHub Releases -->
+    <ul class="version-list" id="github-list">
+      <li class="status" id="gh-status">Loading releases from GitHub…</li>
+    </ul>
 
-      <!-- Latest -->
-      <li class="version-card">
+    <!-- Older builds hosted on SharePoint (not on GitHub). Hidden automatically if the same version exists on GitHub. -->
+    <div class="list-title legacy">Older versions</div>
+    <ul class="version-list" id="legacy-list">
+
+      <li class="version-card" data-version="1.2.90.0">
         <div class="version-top">
-          <div class="version-meta">
-            <span class="badge">Latest</span>
-            <span class="ver">Version 1.3.22.0</span>
-            <span class="date">Released: 4 Sep 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://github.com/whanjit/WitchHanger5CPA/releases/download/1.3.22.0/WitchHanger5Setup.msi" target="_blank" rel="noopener">Download</a>
-          </div>
+          <div class="version-meta"><span class="ver">Version 1.2.90.0</span><span class="date">Released: 6 April 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBRM9sWtHSaR61VOgApITwDAePdmfz3PkO11Ihmmyh-FEY?e=TfGzdh&download=1" target="_blank" rel="noopener">Download</a></div>
         </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Added :</strong> Added display of customized dimension indicators for Fig. 384 clamp base on GA Drawings.</li>
-            <li><strong>Added :</strong> Added option to include/exclude shear lug attachment on DC Clamp.</li>
-            <li><strong>Added :</strong> Added option to edit and specify material wording for Fig. 999 Stainless/Slide Plate and Shear Lug.</li>
-          </ul>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
+          <ul class="notes-list"><li><strong>Added :</strong> Collision Detection: Added a new helper module to automatically detect physical interferences between vertical pipes and surrounding equipment.</li></ul>
         </details>
       </li>
 
-      <!-- Others -->
-      <li class="version-card">
+      <li class="version-card" data-version="1.2.89.0">
         <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.3.20.0</span>
-            <span class="date">Released: 29 July 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://github.com/whanjit/WitchHanger5CPA/releases/download/1.3.20.0/WitchHanger5Installer.exe" target="_blank" rel="noopener">Download</a>
-          </div>
+          <div class="version-meta"><span class="ver">Version 1.2.89.0</span><span class="date">Released: 27 March 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQCLgnbWq4L5Q7uSZhL3PB2sAdKE_bMq3FVJdFIphQuJR1w?e=aAQpX2&download=1" target="_blank" rel="noopener">Download</a></div>
         </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Fixed :</strong> Fixed an infinite loop issue when specifying the size of the LVH Variable Spring Support.</li>
-            <li><strong>Fixed :</strong> Fixed an issue where Stainless Steel plate components could not be used with the LVH Variable Spring Support.</li>
-          </ul>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
+          <ul class="notes-list"><li><strong>Fixed :</strong> Resolved an issue where Ancillary load units were incorrectly converted when saving as a WH4 file.</li></ul>
         </details>
       </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.3.3.0</span>
-            <span class="date">Released: 19 June 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://github.com/whanjit/WitchHanger5CPA/releases/download/1.3.3.0/WitchHanger5Installer.exe" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
 
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Fixed :</strong> Corrected rod length calculation for connections to Variable Type D/E supports.</li>
-            <li><strong>Added :</strong> Added a new Assembly Typical for Variable Type F-only support assemblies.</li>
-          </ul>
+      <li class="version-card" data-version="1.2.88.0">
+        <div class="version-top">
+          <div class="version-meta"><span class="ver">Version 1.2.88.0</span><span class="date">Released: 24 March 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQC-VZzvRHu9TbluF1W82OtyASXYTLLphm5_xKX5_cudaN0?e=SB61NM&download=1" target="_blank" rel="noopener">Download</a></div>
+        </div>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
+          <ul class="notes-list"><li><strong>Changed:</strong> Improved Canvas Paint Exception Handling.</li></ul>
         </details>
       </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.3.2.0</span>
-            <span class="date">Released: 18 June 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://github.com/whanjit/WitchHanger5CPA/releases/download/1.3.2.0/WitchHanger5Installer.exe" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
 
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Fixed :</strong> Fixed an issue where FIG133/94 or the threaded part connected from FIG102 could be missing due to the rod splitting feature.</li>
-            <li><strong>Removed :</strong> Removed LT CARBON STEEL material from the pipe clamp material selection/mapping.</li>
-          </ul>
-        </details>
-      </li>
-      <li class="version-card">
+      <li class="version-card" data-version="1.2.87.0">
         <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.98.0</span>
-            <span class="date">Released: 26 May 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://github.com/whanjit/WitchHanger5CPA/releases/download/1.2.98.0/WitchHanger5Installer.exe" target="_blank" rel="noopener">Download</a>
-          </div>
+          <div class="version-meta"><span class="ver">Version 1.2.87.0</span><span class="date">Released: 17 March 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQDnlUCu07lmQoYP2X0UgK-yAQIBJY4mvVFNPB2E7JOWRxU?e=qXQNxL&download=1" target="_blank" rel="noopener">Download</a></div>
         </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Changed :</strong> Inch unit values are now displayed as whole numbers instead of fractions.</li>
-          </ul>
-        </details>
-      </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.96.0</span>
-            <span class="date">Released: 21 May 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://github.com/whanjit/WitchHanger5CPA/releases/download/1.2.96.0/WitchHanger5Installer.exe" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Fix :</strong> Fixed an issue with inch unit conversion affecting the span value for double support types.</li>
-          </ul>
-        </details>
-      </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.94.0</span>
-            <span class="date">Released: 13 May 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://github.com/whanjit/WitchHanger5CPA/releases/download/1.2.94.0/WitchHanger5Installer.exe" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Fix :</strong> Fixed an issue where the FigDC2 3D model was not displayed correctly.</li>
-          </ul>
-        </details>
-      </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.93.0</span>
-            <span class="date">Released: 13 May 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://github.com/whanjit/WitchHanger5CPA/releases/download/1.2.93.0/WitchHanger5Installer.exe" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Improved :</strong> WH drawings now include the elbow plate notch/slot detail for better alignment with engineering standards and catalogue drawings.</li>
-          </ul>
-        </details>
-      </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.92.0</span>
-            <span class="date">Released: 8 May 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://github.com/whanjit/WitchHanger5CPA/releases/download/1.2.92.0/WitchHanger5Installer.exe" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Improved :</strong> Direction mapping for Vertical, Lateral, and Axial inputs based on the selected project axis system.</li>
-          </ul>
-        </details>
-      </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.91.0</span>
-            <span class="date">Released: 28 April 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://github.com/whanjit/WitchHanger5CPA/releases/download/1.2.91.0/WitchHanger5Installer.exe" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Updated :</strong>Improved clarity and layout for the Open File and Recent Files dialogs to enhance navigation.</li>
-            <li><strong>Added :</strong> For projects set to Imperial units, in the Spring Detail view, the system now displays both inch and mm dimensions simultaneously for better cross-referencing.</li>
-          </ul>
-        </details>
-      </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.90.0</span>
-            <span class="date">Released: 6 April 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBRM9sWtHSaR61VOgApITwDAePdmfz3PkO11Ihmmyh-FEY?e=TfGzdh&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Added :</strong> Collision Detection: Added a new helper module to automatically detect physical interferences between vertical pipes and surrounding equipment.</li>
-          </ul>
-        </details>
-      </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.89.0</span>
-            <span class="date">Released: 27 March 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQCLgnbWq4L5Q7uSZhL3PB2sAdKE_bMq3FVJdFIphQuJR1w?e=aAQpX2&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Fixed :</strong> Resolved an issue where Ancillary load units were incorrectly converted when saving as a WH4 file.</li>
-          </ul>
-        </details>
-      </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.88.0</span>
-            <span class="date">Released: 24 March 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQC-VZzvRHu9TbluF1W82OtyASXYTLLphm5_xKX5_cudaN0?e=SB61NM&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Changed:</strong> Improved Canvas Paint Exception Handling.</li>
-          </ul>
-        </details>
-      </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.87.0</span>
-            <span class="date">Released: 17 March 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQDnlUCu07lmQoYP2X0UgK-yAQIBJY4mvVFNPB2E7JOWRxU?e=qXQNxL&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
-
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
           <ul class="notes-list">
             <li><strong>Changed:</strong> Pipe size annotation: Adjusted the leader point/reference.</li>
             <li><strong>Feature:</strong> Added customizable Rod Length threshold for FIG 94/133 selection per project requirements.</li>
           </ul>
         </details>
       </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.86.0</span>
-            <span class="date">Released: 06 March 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBNPgpVwzRwR5ujDdXBDkUBAY9WjK32AtTYBq5wisCd7KU?e=CN7LWN&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
 
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Bug Fix:</strong> Improved Database Security and Reliability: Implemented Parameterized SQL to handle special characters and null values.</li>
-          </ul>
+      <li class="version-card" data-version="1.2.86.0">
+        <div class="version-top">
+          <div class="version-meta"><span class="ver">Version 1.2.86.0</span><span class="date">Released: 06 March 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBNPgpVwzRwR5ujDdXBDkUBAY9WjK32AtTYBq5wisCd7KU?e=CN7LWN&download=1" target="_blank" rel="noopener">Download</a></div>
+        </div>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
+          <ul class="notes-list"><li><strong>Bug Fix:</strong> Improved Database Security and Reliability: Implemented Parameterized SQL to handle special characters and null values.</li></ul>
         </details>
       </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.85.0</span>
-            <span class="date">Released: 05 March 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQDnhZIyX_XxRqefj8JvMIdiAROxR2LzvCBBSCYTIvYqr04?e=AnsBei&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
 
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Bug Fix:</strong> Corrected the reference connection point for FIG279R.</li>
-          </ul>
+      <li class="version-card" data-version="1.2.85.0">
+        <div class="version-top">
+          <div class="version-meta"><span class="ver">Version 1.2.85.0</span><span class="date">Released: 05 March 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQDnhZIyX_XxRqefj8JvMIdiAROxR2LzvCBBSCYTIvYqr04?e=AnsBei&download=1" target="_blank" rel="noopener">Download</a></div>
+        </div>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
+          <ul class="notes-list"><li><strong>Bug Fix:</strong> Corrected the reference connection point for FIG279R.</li></ul>
         </details>
       </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.84.0</span>
-            <span class="date">Released: 02 March 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQC6GNdF-oCwTbVznBExRCc9AblhbVpEWDl_VPl0L58_Coc?e=rMizNd&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
 
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Bug Fix:</strong> Corrected the reference table names for CA51 all types.</li>
-          </ul>
+      <li class="version-card" data-version="1.2.84.0">
+        <div class="version-top">
+          <div class="version-meta"><span class="ver">Version 1.2.84.0</span><span class="date">Released: 02 March 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQC6GNdF-oCwTbVznBExRCc9AblhbVpEWDl_VPl0L58_Coc?e=rMizNd&download=1" target="_blank" rel="noopener">Download</a></div>
+        </div>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
+          <ul class="notes-list"><li><strong>Bug Fix:</strong> Corrected the reference table names for CA51 all types.</li></ul>
         </details>
       </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.83.0</span>
-            <span class="date">Released: 02 March 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBVYvMBLUCoRrpDzxaD3MjzAU1TcrC_85XNfluTxGSzWmM?e=F0PAZO&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
 
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Bug Fix:</strong> Corrected the port name labeling for CA51 Type S connector parts.</li>
-          </ul>
+      <li class="version-card" data-version="1.2.83.0">
+        <div class="version-top">
+          <div class="version-meta"><span class="ver">Version 1.2.83.0</span><span class="date">Released: 02 March 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBVYvMBLUCoRrpDzxaD3MjzAU1TcrC_85XNfluTxGSzWmM?e=F0PAZO&download=1" target="_blank" rel="noopener">Download</a></div>
+        </div>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
+          <ul class="notes-list"><li><strong>Bug Fix:</strong> Corrected the port name labeling for CA51 Type S connector parts.</li></ul>
         </details>
       </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.82.0</span>
-            <span class="date">Released: 15 Feb 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBBEOL5IJBBQ6iWoCoXqet2AV6zWkDuqN7LNCh7d_0MMwo?e=kjhjyY&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
 
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Update:</strong> Adjusted diameter dimensions for Spring Casing Type AV070 (A, B, and C).</li>
-          </ul>
+      <li class="version-card" data-version="1.2.82.0">
+        <div class="version-top">
+          <div class="version-meta"><span class="ver">Version 1.2.82.0</span><span class="date">Released: 15 Feb 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBBEOL5IJBBQ6iWoCoXqet2AV6zWkDuqN7LNCh7d_0MMwo?e=kjhjyY&download=1" target="_blank" rel="noopener">Download</a></div>
+        </div>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
+          <ul class="notes-list"><li><strong>Update:</strong> Adjusted diameter dimensions for Spring Casing Type AV070 (A, B, and C).</li></ul>
         </details>
       </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.81.0</span>
-            <span class="date">Released: 30 Jan 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQDSg3YoulrqS5MuHArpg4t9AV8yngnyMzEwhGSYzxhcwQI?e=ewz6te&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
 
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Fix:</strong> FIG337A/B selection now includes PIN size in the selection condition.</li>
-          </ul>
+      <li class="version-card" data-version="1.2.81.0">
+        <div class="version-top">
+          <div class="version-meta"><span class="ver">Version 1.2.81.0</span><span class="date">Released: 30 Jan 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQDSg3YoulrqS5MuHArpg4t9AV8yngnyMzEwhGSYzxhcwQI?e=ewz6te&download=1" target="_blank" rel="noopener">Download</a></div>
+        </div>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
+          <ul class="notes-list"><li><strong>Fix:</strong> FIG337A/B selection now includes PIN size in the selection condition.</li></ul>
         </details>
       </li>
-      
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.80.0</span>
-            <span class="date">Released: 19 Jan 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQA2j_vh1_7RQZZZNjtZWh-PAcMIuaEcSHBsPoDSu747gy4?e=ZEk4bb&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
 
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Changed:</strong> Topsuspension Lug dimensions on Detail Drawing of CA52 Y, Z</li>
-          </ul>
+      <li class="version-card" data-version="1.2.80.0">
+        <div class="version-top">
+          <div class="version-meta"><span class="ver">Version 1.2.80.0</span><span class="date">Released: 19 Jan 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQA2j_vh1_7RQZZZNjtZWh-PAcMIuaEcSHBsPoDSu747gy4?e=ZEk4bb&download=1" target="_blank" rel="noopener">Download</a></div>
+        </div>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
+          <ul class="notes-list"><li><strong>Changed:</strong> Topsuspension Lug dimensions on Detail Drawing of CA52 Y, Z</li></ul>
         </details>
       </li>
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.79.0</span>
-            <span class="date">Released: 14 Jan 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQAHeOh5eZORTKZG82FjWK26AbkJs27lEJ3ueZFX_jEglvc?e=i4foQ2&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
 
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
-          <ul class="notes-list">
-            <li><strong>Added:</strong> Graphite pad option for constant supports</li>
-          </ul>
+      <li class="version-card" data-version="1.2.79.0">
+        <div class="version-top">
+          <div class="version-meta"><span class="ver">Version 1.2.79.0</span><span class="date">Released: 14 Jan 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQAHeOh5eZORTKZG82FjWK26AbkJs27lEJ3ueZFX_jEglvc?e=i4foQ2&download=1" target="_blank" rel="noopener">Download</a></div>
+        </div>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
+          <ul class="notes-list"><li><strong>Added:</strong> Graphite pad option for constant supports</li></ul>
         </details>
       </li>
-      
-      <li class="version-card">
-        <div class="version-top">
-          <div class="version-meta">
-            <span class="ver">Version 1.2.78.0</span>
-            <span class="date">Released: 09 Jan 2026</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBmux1CzI6lQ6-LTD5C7hc1AXflVuU4yaP0e1-OEqIkk6s?e=DbsXwW&download=1" target="_blank" rel="noopener">Download</a>
-          </div>
-        </div>
 
-        <details class="notes" open>
-          <summary>
-            Release notes
-            <span class="notes-hint">(short)</span>
-          </summary>
+      <li class="version-card" data-version="1.2.78.0">
+        <div class="version-top">
+          <div class="version-meta"><span class="ver">Version 1.2.78.0</span><span class="date">Released: 09 Jan 2026</span></div>
+          <div class="actions"><a class="btn" href="https://cpltdth-my.sharepoint.com/:u:/g/personal/wiwat_cp-ltd_co_th/IQBmux1CzI6lQ6-LTD5C7hc1AXflVuU4yaP0e1-OEqIkk6s?e=DbsXwW&download=1" target="_blank" rel="noopener">Download</a></div>
+        </div>
+        <details class="notes"><summary>Release notes <span class="notes-hint">(short)</span></summary>
           <ul class="notes-list">
             <li><strong>Fix:</strong> FIG102 ↔ FIG384A/B/C/D compatibility</li>
             <li><strong>Change:</strong> Rod RTO calculation for FIG400 + FIG102 + FIG384A/B/C/D connection set</li>
@@ -771,16 +315,97 @@
     </footer>
 
   </div>
+
+  <script>
+    (function () {
+      const OWNER = "whanjit";
+      const REPO  = "WitchHanger5CPA";
+      const API   = `https://api.github.com/repos/${OWNER}/${REPO}/releases?per_page=100`;
+      const RELEASES_PAGE = `https://github.com/${OWNER}/${REPO}/releases`;
+
+      const list   = document.getElementById("github-list");
+      const status = document.getElementById("gh-status");
+
+      const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
+        ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+
+      const fmtDate = iso => new Date(iso).toLocaleDateString("en-GB",
+        { day: "numeric", month: "short", year: "numeric" });
+
+      // Prefer .msi, then .exe, then any asset
+      function pickInstaller(assets) {
+        if (!assets || !assets.length) return null;
+        return assets.find(a => /\.msi$/i.test(a.name))
+            || assets.find(a => /\.exe$/i.test(a.name))
+            || assets[0];
+      }
+
+      function renderMarkdown(md) {
+        if (!md) return "<p><em>No release notes.</em></p>";
+        if (window.marked && window.DOMPurify) {
+          return DOMPurify.sanitize(marked.parse(md), { ADD_ATTR: ["target"] });
+        }
+        return "<pre style='white-space:pre-wrap'>" + esc(md) + "</pre>";
+      }
+
+      function card(rel, isLatest) {
+        const version = rel.tag_name;
+        const asset   = pickInstaller(rel.assets);
+        const dlHref  = asset ? asset.browser_download_url : rel.html_url;
+        const dlLabel = asset ? "Download" : "View on GitHub";
+
+        const li = document.createElement("li");
+        li.className = "version-card";
+        li.innerHTML = `
+          <div class="version-top">
+            <div class="version-meta">
+              ${isLatest ? '<span class="badge">Latest</span>' : ""}
+              ${rel.prerelease ? '<span class="badge pre">Pre-release</span>' : ""}
+              <span class="ver">Version ${esc(version)}</span>
+              <span class="date">Released: ${fmtDate(rel.published_at || rel.created_at)}</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="${esc(dlHref)}" target="_blank" rel="noopener">${dlLabel}</a>
+            </div>
+          </div>
+          <details class="notes" ${isLatest ? "open" : ""}>
+            <summary>Release notes <span class="notes-hint">(from GitHub)</span></summary>
+            <div class="md">${renderMarkdown(rel.body)}</div>
+          </details>`;
+        li.querySelectorAll(".md a").forEach(a => { a.target = "_blank"; a.rel = "noopener"; });
+        return li;
+      }
+
+      fetch(API, { headers: { "Accept": "application/vnd.github+json" } })
+        .then(r => {
+          if (!r.ok) throw new Error("GitHub API " + r.status);
+          return r.json();
+        })
+        .then(releases => {
+          releases = releases.filter(r => !r.draft);
+          status.remove();
+
+          if (!releases.length) {
+            list.innerHTML = `<li class="status">No releases found. <a href="${RELEASES_PAGE}" target="_blank" rel="noopener">Open GitHub Releases</a></li>`;
+            return;
+          }
+
+          // "Latest" = newest non-prerelease
+          const latestId = (releases.find(r => !r.prerelease) || releases[0]).id;
+          releases.forEach(rel => list.appendChild(card(rel, rel.id === latestId)));
+
+          // Hide SharePoint entries that also exist on GitHub
+          const onGithub = new Set(releases.map(r => r.tag_name.replace(/^v/i, "")));
+          document.querySelectorAll("#legacy-list [data-version]").forEach(el => {
+            if (onGithub.has(el.dataset.version)) el.remove();
+          });
+        })
+        .catch(err => {
+          console.error(err);
+          status.innerHTML = `Couldn't load releases right now. Please use
+            <a href="${RELEASES_PAGE}" target="_blank" rel="noopener">GitHub Releases</a> directly.`;
+        });
+    })();
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
